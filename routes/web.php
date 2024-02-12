@@ -56,12 +56,12 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 //Log in user
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
-Route::get('/run-migration', function () {
-    Artisan::call('optimize:clear');
-    Artisan::call('migrate:fresh --seed');
+// Route::get('/run-migration', function () {
+//     Artisan::call('optimize:clear');
+//     Artisan::call('migrate:fresh --seed');
 
-    return "Migrations executed successfully";
-});
+//     return "Migrations executed successfully";
+// });
 
 // Route::get('/hello', function () {
 //     return response('<h1>hello world</h1>', 200)
